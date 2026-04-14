@@ -1,0 +1,54 @@
+# Playdate voxel engine
+
+A development log about building a voxel engine and game world for the Playdate, Panic's small handheld with a 1-bit screen and a surprising amount of character.
+This project is interesting to me because it combines several things I enjoy at once: low-level rendering, tight technical constraints, unusual visual results, and the challenge of making a world feel convincing with very little. The Playdate is modern hardware, but in many ways it rewards the same kind of thinking as much older systems.
+=> ../index.gmi Back to main page
+
+## posts
+=> voxel_2026-04-13.gmi 2026-04-13 - a voxel engine, part 6: shaping memory access
+=> voxel_2026-04-10.gmi 2026-04-10 - a voxel engine, part 5: water without simulation
+=> voxel_2026-04-09.gmi 2026-04-09 - a voxel engine, part 4: making depth visible
+=> voxel_2026-04-07.gmi 2026-04-07 - a voxel engine, part 3: reducing resolution on purpose
+=> voxel_2026-04-06.gmi 2026-04-06 - a voxel engine, part 2: making the math cheaper
+=> voxel_2026-04-04.gmi 2026-04-04 - a voxel engine, part 1: the core algorithm
+
+## the system
+The Playdate is a small handheld with a monochrome display, limited resolution, and fairly constrained CPU and memory bandwidth for this kind of software rendering work. It is not a machine where one can casually throw around a full modern 3D pipeline.
+
+That is exactly what makes it interesting. The hardware is capable enough to allow ambitious ideas, but limited enough that performance, memory access, and representation all matter. I like that alot and the 'unlimited CPU' and 'lua' is, for example, what kept me away from the Pico-8.
+
+## why a voxel engine
+Voxel landscapes are a very appealing fit for a machine like this. They can produce large-scale outdoor scenes, strong depth, and a distinctive visual style without requiring conventional polygon rendering.
+
+What interests me here is not just the renderer itself, but the full chain around it: terrain data, world structure, visibility, explosions, depth handling, islands, water, and eventually gameplay.
+
+The aim is not a pure tech demo. I want a real world with atmosphere and tension, probably closer to lonely exploration, stealth, and collapsing technical ruins than to a straightforward combat game.
+We have more than enough war going on already.
+
+## what is interesting technically
+The Playdate project is interesting to me because it sits between old and new constraints. The machine is much more capable than the 8-bit systems I often work on, but performance still depends heavily on making careful choices.
+
+Topics that matter here include:
+* cache-friendly terrain layout
+* chunked world data for larger maps
+* direct LCD rendering
+* depth buffering for terrain and effects
+* explosion rendering and occlusion
+* terrain generation from real-world data
+* extracting more visual richness from a 1-bit screen
+
+A recurring theme is that RAM access matters a great deal. Some optimizations are less about reducing arithmetic and more about arranging data so the machine can reach it efficiently.
+
+## project status
+Right now the project has moved beyond the earliest experiment stage:
+* a working voxel landscape renderer
+* direct screen rendering
+* ongoing work on depth handling
+* experiments with explosions and screen-space effects
+* terrain-generation workflow for island landscapes
+* continuing work on performance and cache behavior
+
+The next steps are to keep improving depth-aware effects, refine terrain generation, and move the whole thing further from "interesting renderer" toward an actual game world.
+
+## links
+=> ../index.gmi Back to main page

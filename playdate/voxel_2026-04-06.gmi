@@ -1,0 +1,24 @@
+# a voxel engine, part 2: making the math cheaper
+
+The reference version of this renderer is mathematically clean. It uses floating point, recomputes values per sample, and does not worry too much about where the time goes.
+
+That is a good place to start, but not a good place to stay.
+
+On constrained hardware, the question is not whether something works, but whether it works cheaply enough. And in this algorithm, the cost is dominated by one thing: stepping through the map and projecting heights for every column and every distance layer.
+
+The first step is to remove floating point entirely. Instead of recomputing positions along a ray, I switch to fixed-point increments. A ray becomes a starting point plus a delta that is added each step. This turns multiplications into additions, and more importantly, makes the inner loop predictable.
+
+What looks like a small change has a large effect: the core loop becomes a sequence of increments and table lookups instead of repeated arithmetic.
+
+The second step is to move work out of the inner loop. Anything that does not strictly depend on the current sample should be prepared in advance. Slopes, scaling factors, and projection constants can often be computed once per column or even once per frame.
+
+This shifts the structure of the code. Instead of “compute everything where you need it”, it becomes “prepare aggressively, then iterate cheaply”.
+
+A third observation is that not all precision is equally valuable. The original formulation treats all distances the same, but visually they are not. Errors in the far distance are almost invisible, while errors close to the camera are immediately noticeable. This allows small approximations in stepping and projection that would be unacceptable in a general 3D renderer, but work well here.
+
+The result is not just faster code, but simpler code in the inner loop. And that is the real goal: a tight loop that does as little as possible, because it runs more often than anything else.
+
+Interestingly, this way of thinking is less about optimizing instructions and more about shaping the problem. Once the data flow is right, the implementation tends to follow naturally.
+
+=> index.gmi back to Playdate voxel engine
+=> ../index.gmi back home

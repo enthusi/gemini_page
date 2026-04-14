@@ -1,0 +1,27 @@
+# a voxel engine, part 3: reducing resolution on purpose
+
+This is the target platform.
+
+A small device with a 1-bit display and limited resolution. No grayscale, no soft transitions. Everything has to work within that.
+
+Instead of trying to approximate a higher resolution image, I reduce the problem to something that fits the display.
+
+The renderer already works column by column. From there it is a small step to operate on larger blocks instead of individual pixels. Effectively, the resolution is reduced by a factor of two in each direction.
+
+This cuts the workload significantly. More importantly, it matches the way the display behaves. Each block becomes a stable unit instead of a noisy approximation.
+
+What is lost in resolution is replaced with patterns. A small set of dithering masks stands in for shading. It is not precise, but it is consistent and cheap.
+At that point, the image starts to look intentional again.
+
+The same kind of adjustment appears elsewhere. In practice, you rarely work with unlimited resolution. Data is incomplete, noisy, and constrained. Instead of trying to recover everything, it is often better to simplify the representation and focus on the parts that carry structure.
+
+The renderer follows the same pattern:
+* keep the world representation minimal
+* keep the stepping cheap and predictable
+* reduce output resolution to something stable
+
+Each part is simple. Together they form something that holds up.
+Reducing resolution is not just a performance trick. It removes friction between the algorithm and the hardware.
+
+=> index.gmi back to Playdate voxel engine
+=> ../index.gmi back home

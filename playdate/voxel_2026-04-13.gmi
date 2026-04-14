@@ -1,0 +1,46 @@
+# a voxel engine, part 6: shaping memory access
+
+The renderer spends most of its time reading the map. Not computing, not drawing, but fetching data. On this platform, RAM access is slow enough that layout matters more than arithmetic.
+
+A simple 256×256 map already shows this. Access in one direction is much faster than in the other. Sequential reads follow the layout and stay in cache. The other direction effectively jumps with a stride of 256 bytes. The difference is large, close to a factor of two.
+
+Combining height and color into a single 16-bit value improves this. Both are fetched in one access, which reduces bandwidth pressure. The downside is a larger stride. Interleaving now happens in 512-byte steps. This still works, but it does not scale well.
+
+Larger maps make the problem worse. A simple 1024×1024 layout would increase the stride further and degrade performance quickly.
+
+Instead, the map is split into fixed-size tiles. Each tile is 256×256, stored contiguously. A larger world is then a grid of these tiles. In practice, a 1024×1024 map becomes a 4×4 grid of 256×256 chunks.
+
+Access within a tile remains cache-friendly. Crossing tile boundaries happens rarely and only requires updating a pointer, not changing the access pattern itself. Larger worlds behave almost like the small case.
+
+The structure looks like this:
+```c
+#define WORLD_W 1024
+#define WORLD_H 1024
+#define TILE_SIZE 256
+#define TILES_X (WORLD_W / TILE_SIZE)
+#define TILES_Y (WORLD_H / TILE_SIZE)
+#define TILE_PIXELS (TILE_SIZE * TILE_SIZE)
+uint16_t MapTiles[TILES_X * TILES_Y][TILE_PIXELS];
+```
+
+Fetching a value then becomes a two-step process: select the tile, then index inside it.
+```c
+tile = (gx >> 8) + ((gy >> 8) << 2);
+tileptr = use_transposed_map ? MapTilesT[tile] : MapTiles[tile];
+uint16_t v = tileptr[(gx & 255) + ((gy & 255) << 8)];
+color = (v & 0xff);
+height = (v >> 8) & 0xff);
+```
+
+This removes most of the penalty for larger maps. The renderer stays fast, but access is still direction-dependent.
+
+To address that, a second copy of the map is kept in memory, rotated by 90 degrees. It is generated once at startup. Depending on the viewing direction, the renderer switches between the two layouts.
+
+This avoids the worst-case access pattern entirely. One direction becomes fast, the other remains fast as well.
+
+The cost is additional memory and slightly more work when the map changes. Updates, such as water propagation, have to be written to both copies. In practice this is cheap, since it only requires swapping x and y indices.
+
+The result is a layout that matches the access pattern instead of fighting it. The renderer does not try to be cache-friendly by accident. It is designed that way.
+
+=> index.gmi back to Playdate voxel engine
+=> ../index.gmi back home

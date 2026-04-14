@@ -1,0 +1,55 @@
+# Assembloids on the Alice Matra
+
+A development log about porting Assembloids to the Matra Alice 4K, a small and charming French 8-bit machine compatible in many ways with the Tandy MC-10. These days the Matra usually pops up because of the box's cover art by Jean 'Moebius' Giraud.
+
+=> ../index.gmi Back to main page
+
+## posts
+
+=> alice_2026-04-14.gmi 2026-04-14 - Starting Assembloids on the Alice Matra
+
+## the machine
+
+The Matra Alice family is a line of French home computers based on Motorola 6803-family hardware and the MC6847 video chip. The target here is the Alice 4K class of machine and its semigraphics style display modes, where careful use of character cells and color constraints matters much more than on bitmap-oriented systems.
+
+This is not a machine for brute force. It rewards compact logic, precomputation, and making peace with display constraints.
+
+## why Assembloids
+
+Assembloids is a port of the flashgame 'Quartet' by Photon Storm in 2010.
+I remade it with permission for the Atari 2600, C64, Atari Lynx and Watara Supervision so far.
+
+Assembloids is one of my favorite projects to revisit on odd hardware because the core idea is compact and strong: a central tile appears, you place it into one of several windows, and completed patterns score. It has just the right mixture of simple rules, pressure, and spatial reasoning.
+
+It is also a good candidate for a small machine because the real challenge is not raw world simulation but clean game-state handling, rendering, and presentation.
+Yet, there is no huge pressure on the hardware like scrolling or multiple sprites for the core concept.
+All my ports, however, try to max out the technical abilities of the corresponding platform.
+
+## what is interesting technically
+
+The Alice version is not a direct copy of the Commodore 64 original. The hardware is different enough that the game has to be rethought at several levels.
+
+Topics that matter here include:
+* mapping the game to MC6847 semigraphics
+* representing tiles cleanly in character-based form
+* fitting game logic into tight memory
+* keeping redraw simple and deterministic
+* preserving the feel of the original while accepting that some visual and technical choices must differ
+
+## project status
+
+Right now the foundations are in place:
+* basic board representation (but in a coder's design *sigh*)
+* tile placement into windows
+* semigraphics rendering routines
+* an overall layout adapted to the Alice screen
+* early simple scoring
+
+The next steps are to complete more of the gameplay loop, especially window clearing, scoring, and the surrounding polish that makes the game feel alive rather than merely functional.
+
+## links
+
+=> http://assembloids.de My Assembloids webpage
+=> ../index.gmi Back to main page
+
+If you are interested in small systems, unusual constraints, or game ports that need to be reinvented rather than merely translated, this is the right corner of the capsule.

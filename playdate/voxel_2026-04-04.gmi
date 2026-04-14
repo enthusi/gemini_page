@@ -1,0 +1,16 @@
+# a voxel engine, part 1: the core algorithm
+
+I have a soft spot for algorithms that do one thing only, but do it well.
+
+This engine starts from a classic voxel-space terrain renderer: a heightmap, a colormap, and a screen filled column by column. Each map position stores one terrain height and one color. That is restrictive compared to full 3D, but also the source of its efficiency.
+
+The renderer walks through distance layers, samples a line through the map for each layer, projects the sampled heights to screen space, and draws vertical spans. With very little data and very little math, this already creates a convincing landscape.
+
+What I like about this approach is not only the look, but the clarity. The world representation is simple. The rendering model is simple. And yet the result is rich enough to feel like a real engine rather than a toy.
+
+It also maps surprisingly well to constrained hardware. The Playdate, with its 400×240 1-bit display and a CPU below 180 MHz, is just about capable of running this kind of renderer; at least if the implementation is kept careful and efficient.
+
+From here, the real fun starts: replacing the clean reference math with cheaper fixed-point stepping and a few deliberate approximations that fit the hardware much better.
+
+=> index.gmi back to Playdate voxel engine
+=> ../index.gmi back home

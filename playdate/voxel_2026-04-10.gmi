@@ -1,0 +1,30 @@
+# a voxel engine, part 5: water without simulation
+
+The terrain is not just land. It also contains water. Islands need coastlines, valleys suggest rivers, and once those are present, structures like dams become relevant.
+
+A full simulation would require additional data and a different update model. Instead, water is part of the existing map, defined by color. There is no separate structure and no global sea level.
+
+The only rule is local: a cell may become water if a neighbor is water and the height allows it. This is enough to form connected regions. Low areas fill, higher areas remain dry.
+
+The state is updated using two arrays: the current state and the next state. Each step reads from the current array and writes into the next, then swaps them:
+
+``` text
+for each cell (x,y):
+    if !is_water(cur[x,y]):
+        for each neighbor (nx,ny):
+            if is_water(cur[nx,ny]) and height[x,y] <= height[nx,ny]:
+                next[x,y] = WATER
+                break
+    else:
+        next[x,y] = WATER
+swap(cur, next)
+```
+
+Updates are not uniform. Some regions are processed every frame, others only occasionally. In practice this results in two regimes: fast updates along stronger slopes, where water propagates quickly, and slower updates in flatter areas, where changes lag behind.
+
+Waves are not part of the data. They are introduced during rendering by applying a small offset to the sampled height based on position and time. The map itself remains unchanged.
+
+Water stays a color and a local rule. Everything else is derived when needed.
+
+=> index.gmi back to Playdate voxel engine
+=> ../index.gmi back home

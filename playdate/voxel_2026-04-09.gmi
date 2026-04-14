@@ -1,0 +1,24 @@
+# a voxel engine, part 4: making depth visible
+
+The basic renderer does not store depth. It draws the terrain front to back and keeps track of the highest pixel per column. Everything behind that is skipped. For a heightmap, this is usually enough.
+
+The problem appears once the renderer is no longer strictly uniform. To stay fast, it advances in depth spans. Parts of the map are skipped, others sampled more densely. As a result, there is no strict relation between a screen position and a single world position anymore.
+
+Once something is drawn, its depth is implicit and cannot be recovered.
+
+That makes it difficult to add anything on top of the terrain. There is no reliable way to decide whether something should be in front or behind.
+
+The solution is a small depth buffer. Not at full resolution, but at the same reduced resolution as the renderer. One value per block.
+
+While drawing the terrain, the current depth is already known and constant for each span. Writing it into the buffer costs almost nothing: a single byte store per block. Memory usage is small, and there is no additional computation in the inner loop.
+
+Rendering then becomes a simple comparison against that buffer. Draw only if the new depth is closer, and update the stored value.
+
+This removes the dependency on draw order. Visibility becomes local and consistent.
+
+A similar idea appears in Ecstatica, where ellipsoids are rendered against a depth map. Different geometry, but the same principle: once depth is explicit, everything else becomes simpler.
+
+In this engine, terrain, objects, and effects all use the same buffer.
+
+=> index.gmi back to Playdate voxel engine
+=> ../index.gmi back home

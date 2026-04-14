@@ -1,0 +1,22 @@
+# Starting Assembloids on the Alice Matra
+
+Assembloids for Alice 4K is one of those projects that makes immediate sense to me even if it is not the most practical thing in the world. The machine is small, the graphics are restrictive, the memory budget is tight, and that is precisely why it is attractive.
+
+The Alice is not a machine where one casually throws pixels around and cleans things up later. Every choice shows. Layout and data structures become essential. The way a tile is encoded matters. The whole project becomes an exercise in respecting the machine instead of trying to overpower it.
+
+Assembloids feels like a good fit for this kind of work. Its core game logic is strong and compact. A new central tile appears, the player places it into one of several target windows, and completed groups score. That underlying structure is simple enough to survive a move to very different hardware, but interesting enough that the port does not become trivial.
+
+Of course the Alice version cannot simply be a copy of the C64 or Lynx variant. The display hardware is different, the visual language is different, and some parts need to be rethought from scratch. In practice this means accepting semigraphics as a strength rather than treating it as a poor substitute for a bitmap mode.
+
+My current approach uses a cross-shaped layout with multiple windows and 2x2 semigraphics tiles. The board state is compact, the rendering is direct, and the emphasis is on keeping the game logic clear before trying to be clever with presentation.
+
+So far I have the basic structure in place: a board representation, tile placement into windows, and first rendering routines that put recognizable pieces on the screen. That may not sound dramatic, but on a machine like this it is the part where the whole project proves whether it has a chance of feeling right.
+
+The next steps are the more game-like ones: clearing windows, checking completed groups, scoring, and then eventually all the small things that turn a technical experiment into an actual game.
+
+I like projects like this because they sit in a nice middle ground. They are not purely nostalgic, but they are also not modern development in miniature. A good port to a constrained system is really a negotiation with the target machine. You bring over the heart of the game, but you let the hardware decide the body.
+
+More to follow.
+
+=> index.gmi back to Alice
+=> ../index.gmi back home
