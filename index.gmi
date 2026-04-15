@@ -58,9 +58,12 @@ He developed Hopper, the gemini browser on the playdate and hosts these pages
 
 ## a couple of Gemini links:
 => gemini://warmedal.se/~antenna/ Antenna #1
+=> gemini://gemini.smallweb.space/satellite-antenna/ Antenna #2 (tech)
+=> gemini://gemini.smallweb.space/antenna/ Antenna #3 (non-tech)
 => gemini://midnight.pub/ midnight.pub
 => gemini://calcuode.com/gmisub-aggregate.gmi news
 => gemini://gemini.circumlunar.space/capcom/ CAPCOM
 => gemini://gemini.smallweb.space/HOWTO/managing-your-own-capsule.gmi HowTo
 => gemini://bbs.geminispace.org BBS
 => gemini://geminiquickst.art/ Quickstart
+=> gemini://gemini.bortzmeyer.org/software/lupa/lupa-capsules.gmi lupa full list
