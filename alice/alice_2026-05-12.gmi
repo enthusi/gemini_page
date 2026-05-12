@@ -1,0 +1,24 @@
+# Assembloids on the Alice Matra, Part 2
+
+Since the initial setup, the project has moved past the point where it merely 'works' and into the phase where it starts to behave like an actual game. Thanks to some extensive train rides :-) No distractions, barely any internet and plenty of time.
+
+The first major step was proper scoring. The original idea of simply clearing windows is not enough on its own. What matters is how a window is completed. I now distinguish between partial and full faces, and scoring reflects that. This sounds like a small change, but it adds an important layer of feedback and makes each placement decision more meaningful.
+
+From there, I spent some time on presentation, although always within the limits of the machine. I wrote a faster converter to bring in a proper title screen. It is still firmly within the semigraphics constraints, but it gives the game a clear starting point and a bit of identity instead of dropping the player directly into the grid.
+
+The playfield itself has also evolved. The windows now sit on a clean backdrop, and I introduced dedicated text areas to communicate with the player. This turned out to be more important than expected. On a system like the Alice, you cannot rely on subtle visual cues. If a move is invalid and costs a life, the game needs to say so explicitly. The same goes for completing a full face or gaining an extra life. These messages are simple, but they make the rules visible.
+
+Closely related to that is the scoring display. The game now shows not only the accumulated score and a high score, but also the points gained from the most recent action. That immediate feedback helps connect cause and effect, which is especially useful given how abstract the semigraphics representation can be.
+
+One of the bigger structural changes was the addition of a timer. I chose a vertical bar representation, which fits the character-based layout reasonably well. Introducing it forced me to rethink the entire screen arrangement. The original layout did not leave enough room for a timer without cluttering the playfield, so I reorganized the screen quite drastically. The result is more balanced: the play area, status information, and messages each have their own space.
+
+All of these changes share a common theme. On more capable systems, one might layer features on top of an existing layout. On the Alice, each addition tends to push something else out. Every new element forces a decision about what really matters.
+
+At this point, the core loop is largely there: place tiles, complete faces, gain points, manage time, and avoid mistakes. What started as a technical exercise is now beginning to feel like a coherent game.
+
+There is still plenty to do, but the direction is clearer now. The machine has already vetoed a number of ideas and quietly improved others. That ongoing negotiation is still the most interesting part.
+
+More to follow.
+
+=> index.gmi back to Alice
+=> ../index.gmi back home

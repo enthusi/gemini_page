@@ -4,6 +4,7 @@ A development log about porting Assembloids to the Matra Alice 4K, a small and c
 => ../index.gmi Back to main page
 
 ## posts
+=> alice_2026-05-12.gmi 2026-05-12 - Assembloids on the Alice Matra, Part 2
 => alice_2026-04-14.gmi 2026-04-14 - Starting Assembloids on the Alice Matra
 
 ## the machine
