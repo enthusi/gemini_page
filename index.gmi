@@ -51,6 +51,7 @@ Single speed. Minimal. Direct.
 => https://github.com/enthusi GitHub
 => https://csdb.dk/scener/?id=9508 CSDb
 ✉ Mail to c64@enthusi.de 
+=> gemini://tilde.team/~enthusi/ find me also on tilde.team!
 
 ### Thanks to Tijn
 He developed Hopper, the gemini browser on the playdate and hosts these pages
