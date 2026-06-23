@@ -1,0 +1,8 @@
+# First steps developing for NEO GEO CD
+
+A simple development log about my adventure diving into NeoGeo dev.
+Currently limited/focussed on the CD consoles. Why? It yields SOME chance of actually distributing anything that comes out of it. However, it is notably less documented. Well, adds to the adventure part.
+=> ../index.gmi Back to main page
+
+## posts
+=> neogeo_2026-06-23.gmi 2026-06-23 - A first dive into NeoGeo development

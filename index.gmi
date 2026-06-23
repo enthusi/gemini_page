@@ -3,12 +3,12 @@
 This is a small place about low-level computing, simplicity, and building things. Right now, I’m writing about game development on the Playdate and Alice Matra.
 
 ## latest posts
+=> neogeo/neogeo_2026-06-23.gmi 2026-06-23 - A first dive into NeoGeo development
 => alice/alice_2026-05-12.gmi 2026-05-12 - Assembloids on the Alice Matra, Part 2
 => alice/alice_2026-04-14.gmi 2026-04-14 - Starting Assembloids on the Alice Matra
 => playdate/voxel_2026-04-13.gmi 2026-04-13 - a voxel engine, part 6: shaping memory access
 => playdate/voxel_2026-04-10.gmi 2026-04-10 - a voxel engine, part 5: water without simulation
 => playdate/voxel_2026-04-09.gmi 2026-04-09 - a voxel engine, part 4: making depth visible
-=> playdate/voxel_2026-04-07.gmi 2026-04-07 - a voxel engine, part 3: reducing resolution on purpose
 
 ## interests
 ### assembly coding
@@ -26,6 +26,7 @@ C64, Atari 2600, Lynx, PC-98, PC-FX, Alice Matra, Virtual Boy, SNES, Jupiter Ace
 
 => playdate/index.gmi Playdate voxel engine
 => alice/index.gmi Alice Matra Assembloids
+=> neogeo/index.gmi Game Development for the NeoGeo CD
 
 ### astronomy
 Research, instrumentation, and the bigger picture.

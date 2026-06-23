@@ -11,6 +11,10 @@ SECTIONS = {
         "dir": ROOT / "alice",
         "prefix": "alice_",
     },
+    "neogeo": {
+        "dir": ROOT / "neogeo",
+        "prefix": "neogeo_",
+    },
     "playdate": {
         "dir": ROOT / "playdate",
         "prefix": "voxel_",
