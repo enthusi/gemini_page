@@ -4,8 +4,7 @@ Why yet another started project (without having finished any of the recent other
 Well the 'enthusi' handle has a reason - I'm easily enthusiastic about things.
 But I think I'm rather capable of picking up oldish projects and interweaving stuff.
 The NeoGeo has caught my attention - before that AES+ announcement, actually.
-I always wanted to look into the m68K assembly and even got an Atari ST for that reason but
-then started on the notorious Alice Matra with its Motorola 6803 CPU - so some early relative if you so want. It's a fun little CPU and I must say the m68k really makes a great first impression when coding in bare assembly! There are C compilers available for the NeoGeo and even a whole DEV kit but bleh, I never liked those and the Playdate is the only device I ever used a devkit for.
+I always wanted to look into the m68K assembly and even got an Atari ST for that reason but then started on the notorious Alice Matra with its Motorola 6803 CPU - so some early relative if you so want. It's a fun little CPU and I must say the m68k really makes a great first impression when coding in bare assembly! There are C compilers available for the NeoGeo and even a whole DEV kit but bleh, I never liked those and the Playdate is the only device I ever used a devkit for.
 
 Half the fun (for me) is getting into a system by heart and byte.
 

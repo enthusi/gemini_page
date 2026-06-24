@@ -1,0 +1,27 @@
+# A map made of sprites for the NeoGeo
+
+The NeoGeo has plenty of sprites and they are in fact also used for any background graphics. This explains in part the visual quality of the system's games. There are so many available 16x16 pixel sprites (96 per scanline, 381 in total on screen) without any slowdown when many are drawn, that there is no need to re-use patterns. 
+This would be somewhat tedious to manage when things scroll etc. There are two seemingly small things that have a huge impact on handling the system. The first is that the 16x16 objects are rather elements than sprites. You can combine several of them vertically - Up to 32 of them (with the option to wrap around) - to form one unique sprite object with a single X,Y position and scaling etc.
+The second cool option is to chain sprites together so they cling to the sprite defined just before. This allows for screen-filling maps that act as if they were made out of a single object!
+In my particular case I played around with a 20x15 tilemap. Each tile being one 16x16 sprites.
+So I had to set up 20 columns of sprites, each 15 sprite-elements high. All chained up.
+In addition, I defined a small single sprite which is animated in 4 frames.
+Introducing another oddity of the NeoGeo: sprites can be autoanimated in hardware, such that the lower 2 or 3 bits of a sprite-definition-pointer are autoincreased at a definable framerate.
+All you need is to set up 4 consecutive sprite definitions in memory (at a proper alignment) and enable the animation-bit-flag for that sprite (which is plainly what I did here).
+I like this system a lot already ;-)
+So this 2nd test already demonstrates (and taught me) quite alot.
+
+=> https://www.youtube.com/watch?v=2ymHTxCBoW4 YouTube link to Test #2
+
+And I'm ending this on a very nice summary of the sprite data definition taken from
+=> https://wiki.neogeodev.org/index.php/Sprite_graphics_format The NeoGeo Development Wiki
+
+``` Sprite definition
+Bit # ...543210
+      ...nCLLLL
+
+n: Tile number (multiple bits)
+C: Block column, 0 = blocks 1 & 2, 1 = blocks 3 & 4
+L: Block line # (0~15)
+```
+=> ../index.gmi Back to main page
