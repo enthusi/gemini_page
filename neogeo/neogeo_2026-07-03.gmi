@@ -1,4 +1,4 @@
-# Bullets and terrain slow down
+# NeoGeo dev: Bullets and terrain slow down
 
 This was a huge step inside the code. The path finding works and while it takes more than 1 frame to compute from scratch it is so fast that for now I'm not even distributing the different passes over several frames and instead just wait for it :) You can notice the very short freezes in the corresponding YT video.
 
