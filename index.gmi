@@ -3,12 +3,12 @@
 This is a small place about low-level computing, simplicity, and building things. Right now, I’m writing about game development on the Playdate and Alice Matra.
 
 ## latest posts
-=> neogeo/neogeo_2026-06-26.gmi 2026-06-26 - A map made of sprites for the NeoGeo
+=> neogeo/neogeo_2026-07-03.gmi 2026-07-03 - Bullets and terrain slow down
+=> neogeo/neogeo_2026-06-26.gmi 2026-06-26 - Dynamic pathfinding on the NeoGeo
+=> neogeo/neogeo_2026-06-25.gmi 2026-06-25 - A map made of sprites for the NeoGeo
 => neogeo/neogeo_2026-06-23.gmi 2026-06-23 - A first dive into NeoGeo development
 => alice/alice_2026-05-12.gmi 2026-05-12 - Assembloids on the Alice Matra, Part 2
 => alice/alice_2026-04-14.gmi 2026-04-14 - Starting Assembloids on the Alice Matra
-=> playdate/voxel_2026-04-13.gmi 2026-04-13 - a voxel engine, part 6: shaping memory access
-=> playdate/voxel_2026-04-10.gmi 2026-04-10 - a voxel engine, part 5: water without simulation
 
 ## interests
 ### assembly coding

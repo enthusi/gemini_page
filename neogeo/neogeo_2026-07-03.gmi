@@ -1,0 +1,27 @@
+# Bullets and terrain slow down
+
+This was a huge step inside the code. The path finding works and while it takes more than 1 frame to compute from scratch it is so fast that for now I'm not even distributing the different passes over several frames and instead just wait for it :) You can notice the very short freezes in the corresponding YT video.
+
+=> https://www.youtube.com/watch?v=DC8g0Qt933I Youtube Neo Geo Dev #4 Movement
+
+What was implemented: objects. Proper objects with an own position, speed, etc. Namely, these quantities for now:
+``` asm
+OBJ_X         equ 0  ; word  x 9.7 fixed, not pixel
+OBJ_Y         equ 2  ; word  y
+OBJ_PATHPOS   equ 4  ; word map pointer
+OBJ_DX        equ 8  ; word 9.7 fixed delta/frame
+OBJ_DY        equ 10 ; word 9.7 fixed delta/frame
+OBJ_STEPS     equ 12 ; word moving flag for 9.7 object motion
+OBJ_ACTIVE    equ 14 ; word 0/1
+OBJ_SPR       equ 16 ; word sprite number
+OBJ_PROGRESS  equ 18 ; accumulates absolute movement within the current tile
+OBJ_SPEED_CUR equ 20 ; word current 9.7 speed per frame
+OBJ_SIZE      equ 22 ; just the endmarker for struct size
+```
+
+So objects are not bound to tiles and when they move pixel wise from one spot on the map to another they set a flag for being in motion and progress dx/dy in 9.7 bit pixel steps. 9.7 is convenient as the x-pixel range on the NeoGeo is 512 pixel = 9 bit and dealing with 16 bit in one go makes sense on the m68k. With 7 fractional bits I can go pretty slow ;-) Or 1/128th of a pixel pre frame which is about 2 seconds for a single pixel movement. 
+Tha also enabled me to consider terrain penalty not only for computing the shortest path but also having units actually moving slower on grass.
+I also added some functionality to the 'towers'. They can emit bullets and right now the aim for the units that's closest to the goal but that still looks and feels pretty stupid etc. It's all just placeholders for now but among the next steps are freely placeable towers with a certain limited range and then we see how to proceed.
+
+=> ../index.gmi Back to main page
+

@@ -1,27 +1,46 @@
-# A map made of sprites for the NeoGeo
+# Dynamic pathfinding on the NeoGeo
 
-The NeoGeo has plenty of sprites and they are in fact also used for any background graphics. This explains in part the visual quality of the system's games. There are so many available 16x16 pixel sprites (96 per scanline, 381 in total on screen) without any slowdown when many are drawn, that there is no need to re-use patterns. 
-This would be somewhat tedious to manage when things scroll etc. There are two seemingly small things that have a huge impact on handling the system. The first is that the 16x16 objects are rather elements than sprites. You can combine several of them vertically - Up to 32 of them (with the option to wrap around) - to form one unique sprite object with a single X,Y position and scaling etc.
-The second cool option is to chain sprites together so they cling to the sprite defined just before. This allows for screen-filling maps that act as if they were made out of a single object!
-In my particular case I played around with a 20x15 tilemap. Each tile being one 16x16 sprites.
-So I had to set up 20 columns of sprites, each 15 sprite-elements high. All chained up.
-In addition, I defined a small single sprite which is animated in 4 frames.
-Introducing another oddity of the NeoGeo: sprites can be autoanimated in hardware, such that the lower 2 or 3 bits of a sprite-definition-pointer are autoincreased at a definable framerate.
-All you need is to set up 4 consecutive sprite definitions in memory (at a proper alignment) and enable the animation-bit-flag for that sprite (which is plainly what I did here).
-I like this system a lot already ;-)
-So this 2nd test already demonstrates (and taught me) quite alot.
+One of the core mechanics I wanted to experiment with for my little NeoGeo tower defense prototype was dynamic pathfinding. Not just computing a path once, but allowing the player to change the map while enemies are already moving.
 
-=> https://www.youtube.com/watch?v=2ymHTxCBoW4 YouTube link to Test #2
+The current implementation is intentionally simple. The map is stored as a regular grid where every cell can represent a street, grass, or a blocking obstacle. Whenever the terrain changes, the complete path map is recalculated.
 
-And I'm ending this on a very nice summary of the sprite data definition taken from
-=> https://wiki.neogeodev.org/index.php/Sprite_graphics_format The NeoGeo Development Wiki
+The algorithm itself is a flood fill (or Dijkstra-style distance map). Starting from the goal, the routine goes through all reachable cells. Streets currently have a very low movement cost, grass is more expensive (20 times more than street), and blocked cells simply stop the path. The result is a map where every reachable tile contains the cost of reaching the goal.
 
-``` Sprite definition
-Bit # ...543210
-      ...nCLLLL
+The nice thing about this representation is that moving an enemy becomes almost trivial. Every "walker" simply inspects the four neighbouring cells (up, down, left and right) and moves towards the one with the lowest value. Since the values always decrease towards the goal, the enemy eventually finds its way there without ever having to compute an individual path.
 
-n: Tile number (multiple bits)
-C: Block column, 0 = blocks 1 & 2, 1 = blocks 3 & 4
-L: Block line # (0~15)
+The video below demonstrates the current state. Using the controller I can place or remove streets, paint grass, or insert blocking obstacles. Every modification immediately causes the distance map to be recomputed, and the walker automatically adapt to the new shortest route.
+
+=> https://youtu.be/qq8ABav1Y5A YouTube Neo Geo Dev #3 Pathfinding
+
+At this stage movement is still tile-by-tile, so the walker runs across the map much faster than they eventually will. That is actually quite convenient while testing since it allows me to verify that path updates work correctly without having to wait for slow-moving units. Pixel-accurate movement has already been implemented in a newer version, but this earlier prototype made debugging the pathfinding itself much easier.
+
+Although there are many possible pathfinding algorithms, I particularly like this approach for a tower defense game. The expensive work happens only when the map changes, while the enemies themselves merely compare four neighbouring values every update. That makes the movement logic extremely small and deterministic—something that feels very much at home on a 1990 arcade machine.
+And the looking-up-neighbours-code works quite well on the NeoGeo's m68k:
+
+``` m68k
+    ; neighbour: up
+	lea -2(a0),a2
+	lea -2(a1),a3
+	bsr.s TryRelax
+
+	; neighbour: down
+	lea 2(a0),a2
+	lea 2(a1),a3
+	bsr.s TryRelax
+
+	; neighbour: left
+	lea -ROWBYTES(a0),a2
+	lea -ROWBYTES(a1),a3
+	bsr.s TryRelax
+
+	; neighbour: right
+	lea ROWBYTES(a0),a2
+	lea ROWBYTES(a1),a3
+	bsr.s TryRelax
 ```
+
+with a0 and a1 pointing into the pathmap and terrainbuffer.
+a2/a3 are then evaluated
+
 => ../index.gmi Back to main page
+
