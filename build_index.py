@@ -23,7 +23,7 @@ SECTIONS = {
 
 POST_RE_TEMPLATE = r"^{prefix}(\d{{4}}-\d{{2}}-\d{{2}})\.gmi$"
 HOME_INDEX = ROOT / "index.gmi"
-HOME_LATEST_COUNT = 6
+HOME_LATEST_COUNT = 12
 
 
 def extract_title(path):

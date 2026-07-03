@@ -1,4 +1,4 @@
-# Dynamic pathfinding on the NeoGeo
+# NeoGeo dev: Dynamic pathfinding
 
 One of the core mechanics I wanted to experiment with for my little NeoGeo tower defense prototype was dynamic pathfinding. Not just computing a path once, but allowing the player to change the map while enemies are already moving.
 

@@ -4,11 +4,17 @@ This is a small place about low-level computing, simplicity, and building things
 
 ## latest posts
 => neogeo/neogeo_2026-07-03.gmi 2026-07-03 - NeoGeo dev: Bullets and terrain slow down
-=> neogeo/neogeo_2026-06-26.gmi 2026-06-26 - Dynamic pathfinding on the NeoGeo
-=> neogeo/neogeo_2026-06-25.gmi 2026-06-25 - A map made of sprites for the NeoGeo
-=> neogeo/neogeo_2026-06-23.gmi 2026-06-23 - A first dive into NeoGeo development
+=> neogeo/neogeo_2026-06-26.gmi 2026-06-26 - NeoGeo dev: Dynamic pathfinding
+=> neogeo/neogeo_2026-06-25.gmi 2026-06-25 - NeoGeo dev: A map made of sprites
+=> neogeo/neogeo_2026-06-23.gmi 2026-06-23 - NeoGeo dev: A first dive into NeoGeo development
 => alice/alice_2026-05-12.gmi 2026-05-12 - Assembloids on the Alice Matra, Part 2
 => alice/alice_2026-04-14.gmi 2026-04-14 - Starting Assembloids on the Alice Matra
+=> playdate/voxel_2026-04-13.gmi 2026-04-13 - a voxel engine, part 6: shaping memory access
+=> playdate/voxel_2026-04-10.gmi 2026-04-10 - a voxel engine, part 5: water without simulation
+=> playdate/voxel_2026-04-09.gmi 2026-04-09 - a voxel engine, part 4: making depth visible
+=> playdate/voxel_2026-04-07.gmi 2026-04-07 - a voxel engine, part 3: reducing resolution on purpose
+=> playdate/voxel_2026-04-06.gmi 2026-04-06 - a voxel engine, part 2: making the math cheaper
+=> playdate/voxel_2026-04-04.gmi 2026-04-04 - a voxel engine, part 1: the core algorithm
 
 ## interests
 ### assembly coding

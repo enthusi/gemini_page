@@ -1,4 +1,4 @@
-# A map made of sprites for the NeoGeo
+# NeoGeo dev: A map made of sprites
 
 The NeoGeo has plenty of sprites and they are in fact also used for any background graphics. This explains in part the visual quality of the system's games. There are so many available 16x16 pixel sprites (96 per scanline, 381 in total on screen) without any slowdown when many are drawn, that there is no need to re-use patterns. 
 This would be somewhat tedious to manage when things scroll etc. There are two seemingly small things that have a huge impact on handling the system. The first is that the 16x16 objects are rather elements than sprites. You can combine several of them vertically - Up to 32 of them (with the option to wrap around) - to form one unique sprite object with a single X,Y position and scaling etc.

@@ -6,6 +6,6 @@ Currently limited/focussed on the CD consoles. Why? It yields SOME chance of act
 
 ## posts
 => neogeo_2026-07-03.gmi 2026-07-03 - NeoGeo dev: Bullets and terrain slow down
-=> neogeo_2026-06-26.gmi 2026-06-26 - Dynamic pathfinding on the NeoGeo
-=> neogeo_2026-06-25.gmi 2026-06-25 - A map made of sprites for the NeoGeo
-=> neogeo_2026-06-23.gmi 2026-06-23 - A first dive into NeoGeo development
+=> neogeo_2026-06-26.gmi 2026-06-26 - NeoGeo dev: Dynamic pathfinding
+=> neogeo_2026-06-25.gmi 2026-06-25 - NeoGeo dev: A map made of sprites
+=> neogeo_2026-06-23.gmi 2026-06-23 - NeoGeo dev: A first dive into NeoGeo development

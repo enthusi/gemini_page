@@ -1,4 +1,4 @@
-# A first dive into NeoGeo development
+# NeoGeo dev: A first dive into NeoGeo development
 
 Why yet another started project (without having finished any of the recent others)?
 Well the 'enthusi' handle has a reason - I'm easily enthusiastic about things.
