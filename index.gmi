@@ -34,6 +34,10 @@ C64, Atari 2600, Lynx, PC-98, PC-FX, Alice Matra, Virtual Boy, SNES, Jupiter Ace
 => alice/index.gmi Alice Matra Assembloids
 => neogeo/index.gmi Game Development for the NeoGeo CD
 
+###  Harmonica 
+I figured I may take my time with it as I've seen very old folks playing it ;-) I started to set up some simple songs for the diatonic harp here (C, but doesn't really matter)
+=> harmonica/index.gmi Harmonica tabs (diatonic C)
+
 ### astronomy
 Research, instrumentation, and the bigger picture.
 My profession and passion ♥
@@ -54,6 +58,7 @@ Single speed. Minimal. Direct.
 * GO (the board game) - but I soon realised that it's an never ending journey that I better do not get TOO deep into if I ever want to get other things done.
 * Japan language - but I soon realised ... still on it though. It is amazing and prevents brain rot (such goes my theory at least).
 
+
 ## contact / elsewhere
 => https://github.com/enthusi GitHub
 => https://csdb.dk/scener/?id=9508 CSDb
@@ -68,7 +73,6 @@ He developed Hopper, the gemini browser on the playdate and hosts these pages
 => gemini://sava.rocks/blog/ very nice one
 => gemini://misfin.org/ misfin - I want to look into that
 => gemini://skyjake.fi/lagrange/getting_started.gmi Lagrange's starting page
-=> gemini://warmedal.se/~antenna/ Antenna #1
 => gemini://gemini.smallweb.space/satellite-antenna/ Antenna #2 (tech)
 => gemini://gemini.smallweb.space/antenna/ Antenna #3 (non-tech)
 => gemini://midnight.pub/ midnight.pub

@@ -1,0 +1,97 @@
+# MASH Theme (Harmonica)
+
+Theme from *M*A*S*H* by Johnny Mandel with lyrics by Mike Altman.
+
+Positive numbers are blow notes.
+Negative numbers are draw notes.
+
+```
+  6    -5     5    -5     6    -5     5    -4
+Through Ear-   ly  Morn-  ing   Fog    I    See
+
+  5    -4     5    -4     5    -4     4
+Vis-   ions   Of   The  Things  To    Be
+
+  5    -4     4    -4     4    -4     4    -3
+The   Pains  That  Are  With-  Held   For   Me
+
+ -4     4    -3     4    -3     4    -4     5
+I     Re-   al-   ise   And    I     Can   See
+
+  6    -6     6    -6     6    -6     6
+That  Su-    i-    cide  Is    Pain- Less
+
+  6    -6     6    -6     6    -6     6
+It    Brings On    Man-  y     Chang- es
+
+  6     5     6    -6     7    -8     7    -6     6    -6
+And   I     Can   Take   Or   Leave   It    If    I    Please
+
+
+ -5     6    -5     5    -5     6    -6     6
+The   Game  Of    Life  Is    Hard   To    Play
+
+  5    -5     5    -5     6    -5     5    -4
+I'm   Gon-   na    Lose  It    An-    y     Way
+
+  5    -5     5    -5    -6     6    -5     5
+The   Los-   ing   Card  I'll  Some   Day   Lay
+
+  6    -6     6    -5    -6     6    -6     5
+So    This   Is    All   I     Have   To    Say
+
+  6    -6     6    -6     6    -6     6
+That  Su-    i-    cide  Is    Pain- Less
+
+  6    -6     6    -6     6    -6     6
+It    Brings On    Man-  y     Chang- es
+
+  6     5     6    -6     7    -8     7    -6     6    -6
+And   I     Can   Take   Or   Leave   It    If    I    Please
+
+
+  6    -5     5    -5     6    -5     5    -4
+The   Sword Of    Time  Will  Pierce  Our   Skin
+
+  5    -5     5    -4     5    -5     5    -4
+It    Does- n't   Hurt  When  It      Be-   gins
+
+ -5     5    -5     5     6    -6     6    -5
+But   As    It    Works  Its   Way    On    In
+
+  6    -6     6    -5     5    -5     6    -6
+The   Pain  Grows Strong-er   Watch  It    Grin
+
+  6    -6     6    -6     6    -6     6
+That  Su-    i-    cide  Is    Pain- Less
+
+  6    -6     6    -6     6    -6     6
+It    Brings On    Man-  y     Chang- es
+
+  6     5     6    -6     7    -8     7    -6     6    -6
+And   I     Can   Take   Or   Leave   It    If    I    Please
+
+
+  6    -6     6    -5     6    -6     6    -5
+A     Brave Man   Once  Re-   ques-  ted   Me
+
+  5    -5     5    -4     5    -5     5    -4
+To    Ans-  wer   Quest-ions  That   Are   Key
+
+ -5     5    -4     5    -5     5    -4
+Is    To    Be    Or    Not   To    Be
+
+  5    -5     6    -5     5    -4     5    -5
+And   I     Re-   plied Oh    Why    Ask   Me
+
+  6    -6     6    -6     6    -6     6
+That  Su-    i-    cide  Is    Pain- Less
+
+  6    -6     6    -6     6    -6     6
+It    Brings On    Man-  y     Chang- es
+
+  6     5     6    -6     7    -8     7    -6     6    -6
+And   I     Can   Take   Or   Leave   It    If    I    Please
+```
+
+=> index.gmi ← Back to song index.

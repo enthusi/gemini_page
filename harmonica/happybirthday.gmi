@@ -1,0 +1,24 @@
+# Happy Birthday (Harmonica)
+
+A simple numeric harmonica arrangement of the classic birthday song.
+Diatonic C
+
+Positive numbers are blow notes.
+Negative numbers are draw notes.
+
+```
+ 6   6  -6   6   7  -7
+ Happy birthday to you
+
+ 6   6  -6   6  -8   7
+ Happy birthday to you
+
+ 6   6   9   8   7  -7  -6
+ Happy birthday, dear 
+                    someone
+
+-9  -9   8   7  -8   7
+ Happy birthday to you
+```
+
+=> index.gmi ← Back to song index.

@@ -1,0 +1,20 @@
+# Harmonica in enthusi's space
+
+Welcome! Here you'll find a growing collection of harmonica tabs that I've
+reformatted for comfortable reading in Gemini browsers.
+
+## Songs
+
+=> happybirthday.gmi Happy Birthday [easy]
+=> soundsofsilence.gmi The Sound of Silence [easy]
+=> suicideispainless.gmi M*A*S*H Theme [easy]
+=> sinceidonthaveyou.gmi Since I don't have you [medium]
+
+## About
+
+The tabs use a simple numeric notation:
+
+* Positive numbers are blow notes.
+* Negative numbers are draw notes.
+
+=> ../index.gmi ← Back to main capsule
