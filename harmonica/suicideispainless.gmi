@@ -24,10 +24,12 @@ That  Su-    i-    cide  Is    Pain- Less
   6    -6     6    -6     6    -6     6
 It    Brings On    Man-  y     Chang- es
 
-  6     5     6    -6     7    -8     7    -6     6    -6
-And   I     Can   Take   Or   Leave   It    If    I    Please
+  6     5     6    -6     7    -8     7    -6 
+And   I     Can   Take   Or   Leave   It    If
 
-
+  6    -6
+  I    Please
+  
  -5     6    -5     5    -5     6    -6     6
 The   Game  Of    Life  Is    Hard   To    Play
 
@@ -46,10 +48,12 @@ That  Su-    i-    cide  Is    Pain- Less
   6    -6     6    -6     6    -6     6
 It    Brings On    Man-  y     Chang- es
 
-  6     5     6    -6     7    -8     7    -6     6    -6
-And   I     Can   Take   Or   Leave   It    If    I    Please
+  6     5     6    -6     7    -8     7    -6 
+And   I     Can   Take   Or   Leave   It    If
 
-
+  6    -6
+  I    Please
+  
   6    -5     5    -5     6    -5     5    -4
 The   Sword Of    Time  Will  Pierce  Our   Skin
 
@@ -68,10 +72,12 @@ That  Su-    i-    cide  Is    Pain- Less
   6    -6     6    -6     6    -6     6
 It    Brings On    Man-  y     Chang- es
 
-  6     5     6    -6     7    -8     7    -6     6    -6
-And   I     Can   Take   Or   Leave   It    If    I    Please
+  6     5     6    -6     7    -8     7    -6   
+And   I     Can   Take   Or   Leave   It    If  
 
-
+  6    -6
+  I    Please
+  
   6    -6     6    -5     6    -6     6    -5
 A     Brave Man   Once  Re-   ques-  ted   Me
 
@@ -90,8 +96,11 @@ That  Su-    i-    cide  Is    Pain- Less
   6    -6     6    -6     6    -6     6
 It    Brings On    Man-  y     Chang- es
 
-  6     5     6    -6     7    -8     7    -6     6    -6
-And   I     Can   Take   Or   Leave   It    If    I    Please
+  6     5     6    -6     7    -8     7    -6  
+And   I     Can   Take   Or   Leave   It    If 
+
+  6    -6
+  I    Please
 ```
 
 => index.gmi ← Back to song index.
