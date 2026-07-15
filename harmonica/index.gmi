@@ -9,6 +9,8 @@ reformatted for comfortable reading in Gemini browsers.
 => soundsofsilence.gmi The Sound of Silence [easy]
 => suicideispainless.gmi M*A*S*H Theme [easy]
 => sinceidonthaveyou.gmi Since I don't have you [medium]
+=> trailsinthesky.gmi Trails in the Sky
+=> godfather.gmi Godfather Theme
 
 ## About
 
