@@ -1,0 +1,27 @@
+# Assembloids on the Alice Matra, Part 3
+
+Another train ride, another round of work on the Alice port. This time there was no major new game mechanic. Instead, I spent most of the time fixing and polishing the various states around the game itself: starting a game, running out of time, losing the last life and starting again.
+
+One surprisingly important change concerns the timer. Previously it started immediately, which meant that the player was already losing time before making the first move. There is now a small game state flag which keeps the timer stopped until the first tile has actually been placed. The same applies after a game over; now a new game starts in a more sensible state.
+
+Running out of time also has proper feedback now. I added another graphical text window for **TIME OUT!**, using the same four-tile mechanism as the other messages. A timeout now costs a life, displays the message, clears the current tile and resets the timer before play continues.
+
+Game over needed similar attention. The old version did reset the score and lives, but that was not sufficient: parts of the old game could still remain on screen. The board is now reset internally and all four outer windows are explicitly redrawn as empty. I also made the GAME OVER message flash a few times - will need to see how that checks out visually on real hardware, though. 
+
+There were a few smaller changes as well:
+* the lives display is redrawn after loading the background, so it cannot inherit whatever happened to be in the background graphics
+* the little startup sound is active again
+* the message graphics have been extended for the new TIME OUT display
+* timer handling is now tied more cleanly to the actual game state
+* the life bars have proper colors now - aka gradient, baby
+* and quite a bit of old test code from the earlier development stages could finally be removed
+
+So this was mostly a technical polishing session. None of these changes fundamentally alters Assembloids, but together they make the game behave much more consistently. There is now a clearer distinction between waiting for the first move, normal play, a timeout, game over, and starting again.
+
+That is probably less exciting than adding a completely new feature, but it is also the point where the port starts needing fewer special cases in my head while playing it. The machine is slowly becoming responsible for keeping track of all of that itself.
+
+More to follow.
+Actually not much is missing now.
+
+=> index.gmi back to Alice
+=> ../index.gmi back home

@@ -1,9 +1,13 @@
 # enthusi's space
 
-This is a small place about low-level computing, simplicity, and building things.
-Right now, I’m writing about game development on the Playdate and Alice Matra.
+This is a small place about low-level computing, simplicity, and building things. Right now, I’m writing about game development on the Playdate and Alice Matra.
 
 ## latest posts
+=> neogeo/neogeo_2026-07-03.gmi 2026-07-03 - NeoGeo dev: Bullets and terrain slow down
+=> neogeo/neogeo_2026-06-26.gmi 2026-06-26 - NeoGeo dev: Dynamic pathfinding
+=> neogeo/neogeo_2026-06-25.gmi 2026-06-25 - NeoGeo dev: A map made of sprites
+=> neogeo/neogeo_2026-06-23.gmi 2026-06-23 - NeoGeo dev: A first dive into NeoGeo development
+=> alice/alice_2026-05-12.gmi 2026-05-12 - Assembloids on the Alice Matra, Part 2
 => alice/alice_2026-04-14.gmi 2026-04-14 - Starting Assembloids on the Alice Matra
 => playdate/voxel_2026-04-13.gmi 2026-04-13 - a voxel engine, part 6: shaping memory access
 => playdate/voxel_2026-04-10.gmi 2026-04-10 - a voxel engine, part 5: water without simulation
@@ -13,7 +17,6 @@ Right now, I’m writing about game development on the Playdate and Alice Matra.
 => playdate/voxel_2026-04-04.gmi 2026-04-04 - a voxel engine, part 1: the core algorithm
 
 ## interests
-
 ### assembly coding
 Working close to the hardware, optimizing, understanding systems.
 => https://www.youtube.com/@enthusi YouTube channel
@@ -29,6 +32,11 @@ C64, Atari 2600, Lynx, PC-98, PC-FX, Alice Matra, Virtual Boy, SNES, Jupiter Ace
 
 => playdate/index.gmi Playdate voxel engine
 => alice/index.gmi Alice Matra Assembloids
+=> neogeo/index.gmi Game Development for the NeoGeo CD
+
+###  Harmonica 
+I figured I may take my time with it as I've seen very old folks playing it ;-) I started to set up some simple songs for the diatonic harp here (C, but doesn't really matter)
+=> harmonica/index.gmi Harmonica tabs (diatonic C)
 
 ### astronomy
 Research, instrumentation, and the bigger picture.
@@ -50,20 +58,27 @@ Single speed. Minimal. Direct.
 * GO (the board game) - but I soon realised that it's an never ending journey that I better do not get TOO deep into if I ever want to get other things done.
 * Japan language - but I soon realised ... still on it though. It is amazing and prevents brain rot (such goes my theory at least).
 
+
 ## contact / elsewhere
 => https://github.com/enthusi GitHub
 => https://csdb.dk/scener/?id=9508 CSDb
 ✉ Mail to c64@enthusi.de 
+=> gemini://tilde.team/~enthusi/ find me also on tilde.team!
 
 ### Thanks to Tijn
 He developed Hopper, the gemini browser on the playdate and hosts these pages
 => gemini://geopeedees.org/~tkers Tijn's capsule
 
 ## a couple of Gemini links:
-=> gemini://warmedal.se/~antenna/ Antenna #1
+=> gemini://sava.rocks/blog/ very nice one
+=> gemini://misfin.org/ misfin - I want to look into that
+=> gemini://skyjake.fi/lagrange/getting_started.gmi Lagrange's starting page
+=> gemini://gemini.smallweb.space/satellite-antenna/ Antenna #2 (tech)
+=> gemini://gemini.smallweb.space/antenna/ Antenna #3 (non-tech)
 => gemini://midnight.pub/ midnight.pub
 => gemini://calcuode.com/gmisub-aggregate.gmi news
 => gemini://gemini.circumlunar.space/capcom/ CAPCOM
 => gemini://gemini.smallweb.space/HOWTO/managing-your-own-capsule.gmi HowTo
 => gemini://bbs.geminispace.org BBS
 => gemini://geminiquickst.art/ Quickstart
+=> gemini://gemini.bortzmeyer.org/software/lupa/lupa-capsules.gmi lupa full list
