@@ -19,6 +19,10 @@ SECTIONS = {
         "dir": ROOT / "playdate",
         "prefix": "voxel_",
     },
+    "ram": {
+        "dir": ROOT / "ram",
+        "prefix": "ram_",
+    },
 }
 
 POST_RE_TEMPLATE = r"^{prefix}(\d{{4}}-\d{{2}}-\d{{2}})\.gmi$"
