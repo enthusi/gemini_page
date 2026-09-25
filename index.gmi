@@ -16,7 +16,9 @@ This is a small place about low-level computing, simplicity, and building things
 => playdate/voxel_2026-04-07.gmi 2026-04-07 - a voxel engine, part 3: reducing resolution on purpose
 => playdate/voxel_2026-04-06.gmi 2026-04-06 - a voxel engine, part 2: making the math cheaper
 
+### Helpers:
 => weather.gmi Weather in Potsdam
+=> mensa.gmi Menu in Golm :)
 
 ## interests
 ### assembly coding
