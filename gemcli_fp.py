@@ -2,7 +2,7 @@ import socket
 import ssl
 import hashlib
 
-host = "gemini.circumlunar.space"
+host = "gemini.enthusi.de"
 port = 1965
 
 context = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)

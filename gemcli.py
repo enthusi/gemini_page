@@ -1,7 +1,7 @@
 import socket
 import ssl
 
-host = "geopeedees.org"
+host = "gemini.enthusi.de"
 port = 1965
 
 context = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)
