@@ -1,7 +1,8 @@
 # enthusi's field notes
 
-Here is muse about things that puzzle me, touch me, bother me, amaze me or just cross my mind.
-This an by quite random and hence relates to RAM as random access memory.
+Here I muse about things that puzzle me, touch me, bother me, amaze me or just cross my mind.
+(I tried to stick to positive connotations for that list).
+This can be quite random but this is just me.
 
 => ../index.gmi Back to main page
 
