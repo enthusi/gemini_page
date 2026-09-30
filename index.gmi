@@ -3,6 +3,7 @@
 This is a small place about low-level computing, simplicity, and building things. Right now, I’m writing about game development on the Playdate and Alice Matra.
 
 ## latest posts
+=> alice/alice_2026-09-30.gmi 2026-09-30 - Assembloids on the Alice Matra, Part 4
 => ram/ram_2026-09-25.gmi 2026-09-25 - Lyon Gare Part Dieu, a piano & everything
 => alice/alice_2026-09-21.gmi 2026-09-21 - Assembloids on the Alice Matra, Part 3
 => neogeo/neogeo_2026-07-03.gmi 2026-07-03 - NeoGeo dev: Bullets and terrain slow down
@@ -14,7 +15,6 @@ This is a small place about low-level computing, simplicity, and building things
 => playdate/voxel_2026-04-13.gmi 2026-04-13 - a voxel engine, part 6: shaping memory access
 => playdate/voxel_2026-04-10.gmi 2026-04-10 - a voxel engine, part 5: water without simulation
 => playdate/voxel_2026-04-09.gmi 2026-04-09 - a voxel engine, part 4: making depth visible
-=> playdate/voxel_2026-04-07.gmi 2026-04-07 - a voxel engine, part 3: reducing resolution on purpose
 
 ## Helpers:
 => weather.gmi Weather in Potsdam

@@ -1,0 +1,60 @@
+# Assembloids on the Alice Matra, Part 4
+
+The previous round of work was mostly about getting the different game states into shape. Since then, the Alice version has gained sound, better timing around its messages, a small but important rule borrowed from the Lynx version, and one unexpectedly subtle keyboard fix.
+
+The first gameplay change prevents a board clear from happening much too early. During the first nine successful moves into the four outer windows, one randomly selected tile position is withheld. This makes it impossible to complete an outer face while the rest of the board is still essentially empty. Once a face has been completed the restriction is lifted, and after a genuine board clear a new protected opening begins. This follows the solution already used by the Lynx version of Assembloids.
+
+Lives now behave properly as well. The game still starts with three lives, but the displayed sequence is now 3, 2, 1 and then GAME OVER as soon as zero is reached. Previously zero accidentally acted like one more playable life. The lives display also remains at zero while GAME OVER flashes and is reset to three only when the next game actually begins.
+
+## Sound without taking over the machine
+
+The largest addition is a proper collection of sound effects. The Alice ROM already provides a useful routine at $FFAB: pitch goes into A, duration into B, and the ROM takes care of producing the tone. Using that keeps the existing interrupt handling intact and avoids having to drive the speaker directly for effects that are deliberately simple anyway.
+
+There is now a small table-driven sound player. Every effect is stored as pitch/duration pairs terminated by 0,0, so the values are easy to find and tune later on real hardware. At the moment the game has:
+
+* a very short click for placing an ordinary tile
+* different rising phrases for the four scoring categories
+* a longer board-clear and extra-life fanfare
+* separate descending sounds for a bad move and a timeout
+* a three-note GAME OVER sequence
+* and a deliberately trivial four-note title tune
+
+One detail that turned out to matter is sound priority. A successful placement initially requests the normal click, but completing a face replaces that with the appropriate scoring sound. If the completed face also clears the entire board, the board-clear fanfare replaces the scoring sound in turn. Only one effect is finally played, rather than a click, a score sound and a fanfare all following each other.
+
+The ROM routine is blocking, which is perfectly acceptable for these short effects, but it means the order of drawing and playing matters. In the first implementation the completed face could disappear before its sound had finished, or a failed center piece could sit there while the sound played and only then be replaced by BAD MOVE or TIME OUT. That felt noticeably wrong.
+
+The display code has therefore been rearranged. Completing a face first clears its logical board positions while leaving the graphics intact. The score or 1 UP message and the completed face then stay visible for the duration of the selected effect. Only afterwards are the center message and the completed outer window erased. This also allowed several old fixed delays to disappear; the sound itself now provides enough display time.
+
+BAD MOVE and TIME OUT are handled in the same order: show the message immediately, play the effect while it is visible, then clear it and continue. The final life is a special case because losing it enters the game-over sequence directly.
+
+GAME OVER now combines sound and blinking instead of doing them one after another. The failed center piece is replaced immediately, GAME OVER is shown during the first descending note, the center is blank during the second, and GAME OVER returns for the final note. The lives display remains at zero throughout. This feels much more like a single game-over event than a tune followed by a separate flashing message.
+
+## A keyboard difference found on MiSTer
+
+The direction keys are still A, S, Z and W, and their Alice matrix positions were correct. They worked in both emulators I had used, but a test on MiSTer showed that some directions, especially up and down, were not being recognised correctly. All of the keys still worked from BASIC, so this was clearly more subtle than a missing host-key mapping.
+
+The game had assumed one particular polarity for the keyboard-matrix readback: after selecting a column, a pressed row bit was expected to have one fixed value. That assumption happened to work in the emulators but did not describe the result seen in the MiSTer test.
+
+The scanner now measures the idle state instead of assuming it. It writes $FF to Port 1 so that no keyboard column is selected, reads the lower six row bits from $BFFF as an idle mask, and XORs every subsequent selected-column reading with that mask. A pressed key is therefore represented identically inside the game regardless of which idle polarity the implementation returns. The matrix coordinates themselves did not need to change.
+
+This is the kind of problem that makes testing on several implementations worthwhile. Nothing was obviously wrong while staying inside either emulator, and the symptom initially looked like two incorrect key definitions rather than a difference in how the matrix value was being interpreted.
+
+## Smaller cleanups
+
+There were also a few less visible changes along the way:
+
+* startup now runs the full game-state reset, including the opening guard and pending sound state
+* the logical and graphical parts of clearing a completed window are separate routines now
+* empty areas in the message graphics use blank semigraphics bytes instead of ordinary character-space bytes
+* the carry-flag documentation for PLACE_PIECE was corrected to match what the routine actually returns
+* the generic show-message delay and some abandoned timeout/test code could be removed
+* and the pitch/duration data is centralized, which should make later tuning on an actual Alice considerably less painful
+
+So this was a larger step than it first appeared. Sound was the obvious new feature, but making it fit the existing graphics and game states required more work than merely calling the ROM routine. The result now gives immediate visual feedback, keeps the important face or message on screen while its effect plays, handles the last life correctly, and has a keyboard scanner that is less dependent on one particular implementation.
+
+Real-hardware testing and sound tuning are still on the list, of course. But the port is now very close to the point where the remaining work is mostly presentation rather than missing game logic.
+
+More to follow.
+
+=> index.gmi back to Alice
+=> ../index.gmi back home
