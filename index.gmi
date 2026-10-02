@@ -77,6 +77,7 @@ He developed Hopper, the gemini browser on the playdate and hosts these pages
 => gemini://geopeedees.org/~tkers Tijn's capsule
 
 ## a couple of Gemini links:
+=> https://misfin.gitlab.io/ Misfin server software
 => gemini://sava.rocks/blog/ very nice one
 => gemini://misfin.org/ misfin - I want to look into that
 => gemini://skyjake.fi/lagrange/getting_started.gmi Lagrange's starting page
@@ -89,3 +90,4 @@ He developed Hopper, the gemini browser on the playdate and hosts these pages
 => gemini://bbs.geminispace.org BBS
 => gemini://geminiquickst.art/ Quickstart
 => gemini://gemini.bortzmeyer.org/software/lupa/lupa-capsules.gmi lupa full list
+=> gemini://studios-lalla.fr/ good read
