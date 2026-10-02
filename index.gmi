@@ -2,6 +2,8 @@
 
 This is a small place about low-level computing, simplicity, and building things. Right now, I’m writing about game development on the Playdate and Alice Matra.
 
+=> misfin://enthusi@misfin.enthusi.de Send me a Misfin message
+
 ## latest posts
 => alice/alice_2026-09-30.gmi 2026-09-30 - Assembloids on the Alice Matra, Part 4
 => ram/ram_2026-09-25.gmi 2026-09-25 - Lyon Gare Part Dieu, a piano & everything
@@ -68,6 +70,7 @@ Single speed. Minimal. Direct.
 => https://csdb.dk/scener/?id=9508 CSDb
 ✉ Mail to c64@enthusi.de 
 => gemini://tilde.team/~enthusi/ find me also on tilde.team!
+=> misfin://enthusi@misfin.enthusi.de Send me a Misfin message
 
 ### Thanks to Tijn
 He developed Hopper, the gemini browser on the playdate and hosts these pages
