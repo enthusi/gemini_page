@@ -73,6 +73,9 @@ Single speed. Minimal. Direct.
 => gemini://tilde.team/~enthusi/ find me also on tilde.team!
 => misfin://enthusi@misfin.enthusi.de Send me a Misfin message
 
+### books [gpub]
+=> books/u6.gpub U6 personal walkthrough C64
+
 ### Thanks to Tijn
 He developed Hopper, the gemini browser on the playdate and hosts these pages
 => gemini://geopeedees.org/~tkers Tijn's capsule
