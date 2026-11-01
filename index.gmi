@@ -19,6 +19,7 @@ This is a small place about low-level computing, simplicity, and building things
 => playdate/voxel_2026-04-09.gmi 2026-04-09 - a voxel engine, part 4: making depth visible
 
 ## Helpers:
+=> /algol/index.gmi Algol minima
 => weather.gmi Weather in Potsdam
 => mensa.gmi Menu in Golm :)
 
